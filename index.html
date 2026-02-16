@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shrimati Indira Gandhi College</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url("images/logo.png") no-repeat center;
+            background-size: 500px;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.85);
+            z-index: -1;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(to right, #0f3057, #00587a);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #ffd369;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: #022c43;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd369;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            color: #0f3057;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 22px;
+            font-weight: bold;
+            color: #00587a;
+        }
+
+        .description {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* BUTTON */
+        .btn {
+            background-color: #ffd369;
+            color: #0f3057;
+            padding: 12px 25px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0f3057;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* STATS SECTION */
+        .stats {
+            background-color: #f4f9f9;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            font-size: 32px;
+            color: #00587a;
+            margin: 0;
+        }
+
+        .stat-box p {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #022c43;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        /* ================= IMAGE SLIDER ================= */
+
+.slider {
+    width: 90%;
+    max-width: 1000px;
+    height: 400px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slide 12s infinite;
+}
+
+.slides img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    33% {margin-left: 0;}
+    38% {margin-left: -100%;}
+    66% {margin-left: -100%;}
+    71% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+}
+
+
+/* ================= COURSE CARDS ================= */
+
+.courses {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f9f9;
+}
+
+.courses h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #0f3057;
+}
+
+.course-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    background: white;
+    width: 280px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.course-card h3 {
+    color: #00587a;
+}
+
+.course-card p {
+    font-size: 15px;
+    color: #555;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    background-color: #00587a;
+    color: white;
+}
+
+.course-card:hover h3,
+.course-card:hover p {
+    color: white;
+}
+/* ================= VISION & MISSION ================= */
+
+.vision-mission {
+    padding: 60px 20px;
+    background-color: #eef6f9;
+    text-align: center;
+}
+
+.vm-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.vm-card {
+    background: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.vm-card h3 {
+    color: #00587a;
+    margin-bottom: 15px;
+}
+
+.vm-card:hover {
+    transform: translateY(-10px);
+    background-color: #00587a;
+    color: white;
+}
+
+.vm-card:hover h3 {
+    color: #ffd369;
+}
+
+
+/* ================= PLACEMENT SECTION ================= */
+
+.placements {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.placements h2 {
+    margin-bottom: 30px;
+    color: #0f3057;
+}
+
+.logo-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logo-track {
+    display: inline-block;
+    animation: scroll 15s linear infinite;
+}
+
+.logo-track img {
+    height: 80px;
+    margin: 0 40px;
+    vertical-align: middle;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ================= NOTICE BOARD ================= */
+
+.notice-board {
+    background: #f4f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.notice-board h2 {
+    color: #0f3057;
+    margin-bottom: 30px;
+}
+
+.notice-container {
+    width: 80%;
+    max-width: 800px;
+    height: 150px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.notice-list {
+    display: flex;
+    flex-direction: column;
+    animation: scrollNotice 10s linear infinite;
+}
+
+.notice-list div {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 500;
+}
+
+.notice-list div:hover {
+    background-color: #00587a;
+    color: white;
+    cursor: pointer;
+}
+
+/* Pause animation on hover */
+.notice-container:hover .notice-list {
+    animation-play-state: paused;
+}
+
+@keyframes scrollNotice {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+.college-logo {
+    width: 100px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Splash Screen */
+
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #0f3057;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#splash img {
+    width: 150px;
+    animation: zoomIn 2s ease-in-out;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+/* ================= CONTACT SECTION ================= */
+
+.contact {
+    padding: 60px 20px;
+    background-color: #eef6f9;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #0f3057;
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    max-width: 400px;
+    text-align: left;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.map {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+nav input {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 20px;
+}
+
+nav input:focus {
+    outline: 2px solid #ffd369;
+}
+
+
+    </style>
+</head>
+
+<body>
+<!-- SPLASH SCREEN -->
+<div id="splash">
+    <img src="images/logo.png" alt="College Logo">
+</div>
+
+    <header>
+        <h1>SHRIMATI INDIRA GANDHI COLLEGE</h1>
+        <p>Empowering Students for a Better Future</p>
+        <img src="images/logo.png" class="college-logo" alt="College Logo">
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Courses</a>
+    <a href="#">Students Corner</a>
+    <a href="#">Alumnae</a>
+    <a href="#">Admissions</a>
+    <a href="#">Contact</a>
+
+    <!-- SEARCH BAR -->
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchContent()">
+</nav>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h2>Empowering Future Leaders</h2>
+        <p class="tagline">Learn. Grow. Lead.</p>
+        <p class="description">
+            Shrimati Indira Gandhi College is committed to academic excellence,
+            innovation, and holistic development. We provide quality education,
+            modern infrastructure, and career-oriented programs to prepare
+            students for global opportunities.
+        </p>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTV4UFZFu4io2RJ8DH-BCL9TTVFzvgoFmidoVtBIg4ZAJ1fQ/viewform?usp=dialog" target="_blank">
+            <button class="btn">Apply Now</button>
+        </a>
+    </section>
+    <!-- NOTICE BOARD SECTION -->
+<section class="notice-board">
+    <h2>Latest Announcements</h2>
+
+    <div class="notice-container">
+        <div class="notice-list">
+            <div>📢 Admissions Open for 2026 - Apply Now</div>
+            <div>📝 Semester Exam Timetable Released</div>
+            <div>🎉 Cultural Fest Registration Started</div>
+            <div>🏆 Campus Placement Drive on March 15</div>
+            <div>📚 Scholarship Applications Now Available</div>
+
+            <!-- Repeat for smooth scrolling -->
+            <div>📢 Admissions Open for 2026 - Apply Now</div>
+            <div>📝 Semester Exam Timetable Released</div>
+            <div>🎉 Cultural Fest Registration Started</div>
+        </div>
+    </div>
+</section>
+
+    <!-- IMAGE SLIDER -->
+<div class="slider">
+    <div class="slides">
+        <img src="images/college1.jpg" alt="Campus Image">
+        <img src="images/college2.jpg" alt="Students Image">
+        <img src="images/college3.jpg" alt="Library Image">
+    </div>
+</div>
+<!-- COURSES SECTION -->
+<section class="courses">
+    <h2>Our Popular Courses</h2>
+
+    <div class="course-container">
+        <div class="course-card">
+            <h3>B.Sc Computer Science</h3>
+            <p>Advanced programming, AI, Data Science and Web Technologies.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>B.Com</h3>
+            <p>Accounting, Finance, Business Management and Entrepreneurship.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>B.A English</h3>
+            <p>Literature, Communication Skills and Creative Writing.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- STATISTICS SECTION -->
+    <section class="stats">
+        <div class="stat-box">
+            <h3>25+</h3>
+            <p>Courses Offered</p>
+        </div>
+        <div class="stat-box">
+            <h3>1500+</h3>
+            <p>Students Enrolled</p>
+        </div>
+        <div class="stat-box">
+            <h3>100+</h3>
+            <p>Qualified Faculty</p>
+        </div>
+        <div class="stat-box">
+            <h3>95%</h3>
+            <p>Placement Rate</p>
+        </div>
+    </section>
+    <!-- VISION & MISSION SECTION -->
+<section class="vision-mission">
+    <h2>Our Vision & Mission</h2>
+    <div class="vm-container">
+
+        <div class="vm-card">
+            <h3>Our Vision</h3>
+            <p>
+                To be a center of excellence in higher education, empowering
+                students with knowledge, skills, and values to succeed in
+                a global society.
+            </p>
+        </div>
+
+        <div class="vm-card">
+            <h3>Our Mission</h3>
+            <p>
+                To provide quality education through innovative teaching,
+                research, and community engagement while fostering
+                leadership and ethical responsibility.
+            </p>
+        </div>
+
+    </div>
+</section>
+<!-- PLACEMENT SECTION -->
+<section class="placements">
+    <h2>Our Placement Partners</h2>
+
+    <div class="logo-slider">
+        <div class="logo-track">
+            <img src="images/infosys.png" alt="Infosys">
+            <img src="images/tcs.png" alt="TCS">
+            <img src="images/wipro.png" alt="Wipro">
+            <img src="images/hcl.png" alt="HCL">
+            
+            <!-- Repeat logos for smooth looping -->
+            <img src="images/infosys.png" alt="Infosys">
+            <img src="images/tcs.png" alt="TCS">
+            <img src="images/wipro.png" alt="Wipro">
+            <img src="images/hcl.png" alt="HCL">
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact">
+    <h2>Contact Us</h2>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <p><strong>📍 Address:</strong> Shrimati Indira Gandhi College, Tamil Nadu, India</p>
+            <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+            <p><strong>📧 Email:</strong> info@sigc.edu.in</p>
+            <p><strong>🕒 Office Hours:</strong> 9:00 AM – 4:00 PM</p>
+        </div>
+
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps?q=Shrimati+Indira+Gandhi+College+Tamil+Nadu&output=embed"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+    </div>
+</section>
+
+    <footer>
+        <p>© 2026 Shrimati Indira Gandhi College. All rights reserved.</p>
+    </footer>
+
+    <!-- Tidio Chatbot -->
+    <script src="//code.tidio.co/d4ilieq02mekt6urore3mygfjcnlvuli.js" async></script>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById("splash").style.display = "none";
+            }, 3000); // 3 seconds
+        };
+        </script>
+ <script>
+    function searchContent() {
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        let sections = document.querySelectorAll("section, .course-card, .notice-list div");
+    
+        sections.forEach(function(item) {
+            if (item.innerText.toLowerCase().includes(input)) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    }
+    </script>
+           
+</body>
+</html>
